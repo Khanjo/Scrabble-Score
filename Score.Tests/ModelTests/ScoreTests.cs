@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Score.Models;
+using Scores.Models;
 using System.Collections.Generic;
 using System;
 
