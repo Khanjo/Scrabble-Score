@@ -21,5 +21,13 @@ namespace Scores.Tests
             Score newScore = new Score(input);
             Assert.AreEqual(newScore.Word, input);
         }
+        [TestMethod]
+        public void WordArray_MakesArrayFromWord_Score()
+        {
+            string input = "hello";
+            Score newScore = new Score(input);
+            char[] letters = newScore.WordArray();
+            Assert.IsInstanceOfType(letters, typeof(Array));
+        }
     }
 }
