@@ -29,5 +29,12 @@ namespace Scores.Tests
             char[] letters = newScore.WordArray();
             Assert.IsInstanceOfType(letters, typeof(Array));
         }
+        [TestMethod]
+        public void WordScore_ReturnsIntValueForWord_Score()
+        {
+            char[] letters = { 'c', 'a', 't' };
+            int score = letters.WordScore();
+            Assert.AreEqual(score, 5);
+        }
     }
 }
