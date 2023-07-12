@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Scores.Models
 {
@@ -6,6 +7,7 @@ namespace Scores.Models
     {
         public string Word { get; set; }
         public char[] Letters;
+        private static List<int> scores = new List<int> { };
         public Score(string input)
         {
             Word = input;
@@ -65,7 +67,13 @@ namespace Scores.Models
                         break;
                 }
             }
+            scores.Add(score);
             return score;
+        }
+        public int TotalScore()
+        {
+            int sum = scores.Sum();
+            return sum;
         }
     }
 }
