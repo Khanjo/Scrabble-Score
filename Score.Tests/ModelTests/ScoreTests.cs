@@ -14,5 +14,12 @@ namespace Scores.Tests
             Score newScore = new Score();
             Assert.AreEqual(typeof(Score), newScore.GetType());
         }
+        [TestMethod]
+        public void ScoreConstructor_TakesInputAsWord_Score()
+        {
+            string input = "hello";
+            Score newScore = new Score(input);
+            Assert.AreEqual(Score.Word, input);
+        }
     }
 }
