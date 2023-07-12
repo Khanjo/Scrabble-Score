@@ -5,9 +5,9 @@ namespace Scores.Models
     public class Score
     {
         public string Word { get; set; }
-        public Score()
+        public Score(string input)
         {
-
+            Word = input;
         }
     }
 }

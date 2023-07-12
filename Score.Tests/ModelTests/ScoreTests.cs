@@ -11,7 +11,7 @@ namespace Scores.Tests
         [TestMethod]
         public void ScoreConstructor_CreatesInstanceOfScore_Score()
         {
-            Score newScore = new Score();
+            Score newScore = new Score("hello");
             Assert.AreEqual(typeof(Score), newScore.GetType());
         }
         [TestMethod]
@@ -19,7 +19,7 @@ namespace Scores.Tests
         {
             string input = "hello";
             Score newScore = new Score(input);
-            Assert.AreEqual(Score.Word, input);
+            Assert.AreEqual(newScore.Word, input);
         }
     }
 }
