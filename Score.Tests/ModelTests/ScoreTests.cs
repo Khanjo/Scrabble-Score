@@ -32,8 +32,9 @@ namespace Scores.Tests
         [TestMethod]
         public void WordScore_ReturnsIntValueForWord_Score()
         {
-            char[] letters = { 'c', 'a', 't' };
-            int score = letters.WordScore();
+            Score newScore = new Score("cat");
+            newScore.WordArray();
+            int score = newScore.WordScore();
             Assert.AreEqual(score, 5);
         }
     }
